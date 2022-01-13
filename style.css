@@ -5,42 +5,34 @@
 }
 
 body {
-  display: grid;
-  place-items: center;
-  width: 100%;
-  height: 100vh;
-  background: #000;
-  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* 중괄호 앞에 띄어야하지 않음? */
-.wrapper i {
-  font-size: 40px;
-  margin: 0 20px;
-  cursor: pointer;
-  border: 2px solid deepskyblue;
-  border-radius: 28% 72% 46% 54% / 46% 31% 69% 54%;
-  transition: .8s ease-in;
-  position: relative;
-  width: 100px;
-  height: 100px;
+.nav {
+  display: flex;
+}
+
+.nav li {
+  background: #262626;
+  text-transform: uppercase;
+  padding: 15px 30px;
   text-align: center;
-  line-height: 100px;
-  color: deepskyblue;
-}
-
-.wrapper:hover i {
-  opacity: .2;
-}
-
-.wrapper i:hover {
-  opacity: 1;
+  font-weight: 900;
   color: #fff;
-  background: deepskyblue;
-  box-shadow: 0 5px 50px 0 deepskyblue inset,
-              0 5px 50px 0 deepskyblue,
-              0 5px 50px 0 deepskyblue inset,
-              0 5px 50px 0 deepskyblue;
-  text-shadow: 0 0 5px deepskyblue,
-               0 0 5px deepskyblue;
+  list-style: none;
+  width: 150px;
+  height: 50px;
+  margin: 0 20px;
+  transition: .7s;
+  cursor: pointer;
+  font-family: lato;
 }
+
+.nav li:hover {
+  background: darkmagenta;
+  box-shadow: 0 0 0 8px #fff,
+              0 0 0 12px darkmagenta;
+} 
