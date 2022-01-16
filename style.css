@@ -1,54 +1,44 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.wrapper {
+body {
+    background: #000;
+    color: #fff;
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #000;
 }
 
-.item {
-    position: relative;
-    text-decoration: none;
-    color: aquamarine;
-    border: 1px solid aquamarine;
-    border-radius: 50px;
-    padding: 5px 10px;
-    display: inline-block;
-    width: 200px;
-    height: 60px;
-    font-size: 1.3em;
-    text-align: center;
-    background: #000;
-    line-height: 60px;
-    cursor: pointer;
-    font-weight: 900;
-    color: #fff;
+.wrapper i {
+    padding: 8px 20px;
+    border-radius: 28% 72% 30% 90% / 46% 31% 69% 54%;
+    border: 2px solid deepskyblue;
+    color: deepskyblue;
     margin: 0 10px;
-    z-index: 0;
-    overflow: hidden;
-    
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 2s;
 }
 
-.item:hover::before {
-    top: 0;
-    border-radius: 0;
+.wrapper:hover i {
+    opacity: .5;
 }
 
-.item::before {
-    content: "";
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: aquamarine;
-    border-radius: 50% 50% 0 0;
-    z-index: -1;
-    transition: all .9s;
+.wrapper i:hover {
+    opacity: 1;
+    color: #fff;
+    background: deepskyblue;
+    box-shadow: 0 5px 50px 0 deepskyblue inset,
+                0 5px 50px 0 deepskyblue,
+                0 5px 50px 0 deepskyblue inset,
+                0 5px 50px 0 deepskyblue;
+    text-shadow: 0 0 5px deepskyblue,
+                 0 0 5px deepskyblue,
+                 0 0 5px deepskyblue,
+                 0 0 5px deepskyblue;
 }
